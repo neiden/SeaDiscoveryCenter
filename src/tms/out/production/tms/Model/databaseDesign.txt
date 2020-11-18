@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS `temperatures`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `temperatures` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `date` datetime NOT NULL,
+  `sensor_id` varchar(20) DEFAULT NULL,
+  `temperature` decimal(6,3) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=194265 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+
+LOCK TABLES `temperatures` WRITE;
+/*!40000 ALTER TABLE `temperatures` DISABLE KEYS */;
+INSERT INTO `temperatures` VALUES (3346,'2018-02-01 19:19:53','pi_2',77.112),(3347,'2018-02-01 19:20:56','pi_2',77.112),(3348,'2018-02-01 19:21:59','pi_2',77.112),(3349,'2018-02-01 19:23:02','pi_1',77.112),(3350,'2018-02-01 19:24:05','pi_1',77.112),(3351,'2018-02-01 19:25:08','pi_1',77.112),(3352,'2018-02-01 19:26:10','pi_1',77.112));
