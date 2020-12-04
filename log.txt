@@ -1,0 +1,14 @@
+[0;1;31m●[0m pitemp.service - Python Temperature Reporting Service
+   Loaded: loaded (/etc/systemd/system/pitemp.service; bad; vendor preset: enabled)
+   Active: [0;1;31mfailed[0m (Result: exit-code) since Sat 2018-01-20 22:35:17 UTC; 15s ago
+  Process: 16634 ExecStart=/home/pi/temp.py [0;1;31m(code=exited, status=203/EXEC)[0m
+ Main PID: 16634 (code=exited, status=203/EXEC)
+
+Jan 20 22:35:17 raspberrypi systemd[1]: [0;1;39mpitemp.service: Unit entered failed state.[0m
+Jan 20 22:35:17 raspberrypi systemd[1]: [0;1;39mpitemp.service: Failed with result 'exit-code'.[0m
+Jan 20 22:35:17 raspberrypi systemd[1]: pitemp.service: Service hold-off time over, scheduling restart.
+Jan 20 22:35:17 raspberrypi systemd[1]: Stopped Python Temperature Reporting Service.
+Jan 20 22:35:17 raspberrypi systemd[1]: [0;1;39mpitemp.service: Start request repeated too quickly.[0m
+Jan 20 22:35:17 raspberrypi systemd[1]: [0;1;31mFailed to start Python Temperature Reporting Service.[0m
+Jan 20 22:35:17 raspberrypi systemd[1]: [0;1;39mpitemp.service: Unit entered failed state.[0m
+Jan 20 22:35:17 raspberrypi systemd[1]: [0;1;39mpitemp.service: Failed with result 'exit-code'.[0m
