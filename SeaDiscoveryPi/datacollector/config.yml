@@ -1,0 +1,12 @@
+ExamplePi1:
+    name: Example Pi 1
+    ip: 10.0.0.19
+    port: 8080
+    location: Exhibit A
+    sensors:
+        temperature:
+            normal_range: 18-22
+            warning_range: 15-25
+        waterlevel:
+            normal_range: 3-6
+            warning_range: 1-8
