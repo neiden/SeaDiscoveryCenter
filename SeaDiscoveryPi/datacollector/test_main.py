@@ -3,14 +3,13 @@ import yaml
 cfgfile = "config.yml"
 dbfile = "../database/current.csv"
 
+
+
 def func(x):
     return x
 
 def test_func():
     assert func(5) == 4
-
-def test_tab():
-    assert function() == "   "
     
 def read_config():
 
@@ -24,3 +23,4 @@ def read_config():
 
 def test_config():
     assert read_config()
+
