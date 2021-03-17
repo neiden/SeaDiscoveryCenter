@@ -12,9 +12,8 @@ cfgfile = "config.yml"
 dbfile = "../database/current.csv"
 
 # How often to requery devices in seconds
-#updateFrequency = int(sys.argv[1])
-updateFrequency = 5 #Just for the sake of testing; change this back when done.
-
+updateFrequency = int(sys.argv[1])
+#updateFrequency = 5 
 # This function connects to the given Pi Zero's IP
 # and requests specificed data in list
 # e.g.: data_types = ['temp', 'waterlevel']
@@ -113,17 +112,17 @@ while True:
                                         normal_range = device[1]['sensors'].get(data_type)['normal_range']
                                         warning_range = device[1]['sensors'].get(data_type)['warning_range']
                                         data = normal_range.split("-")
-                                        low = int(data[0])
-                                        high = int(data[1])
+                                        low = float(data[0])
+                                        high = float(data[1])
 
                                         data = warning_range.split("-")
-                                        low_warn = int(data[0])
-                                        high_warn = int(data[1])
-                                        
-                                        if result[0] < low or result[0] > high:
+                                        low_warn = float(data[0])
+                                        high_warn = float(data[1])
+                        
+                                        if float(result[0]) < low or float(result[0]) > high:
                                                 dangerflag = 1
 
-                                        if result[1] < low_warn or result[1] > high_warn:
+                                        if float(result[1]) < low_warn or float(result[1]) > high_warn:
                                                 warnflag = 1
                                         
 
