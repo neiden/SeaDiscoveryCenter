@@ -12,4 +12,6 @@ def test_connection():
 #Needs to have server.py running to pass
 def test_query():
     result = connection.query(['temperature', 'waterlevel'])
+    assert result == "query,temperature,waterlevel"
+
 

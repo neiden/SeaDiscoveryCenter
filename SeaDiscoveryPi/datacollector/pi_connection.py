@@ -32,7 +32,7 @@ class pi_connection:
 			return data
 
 		except Exception as e:
-			print("Pi_connection error: " + e)
+			print( e)
 			self.sock.close()
 			self.error = e
 			return 0

@@ -1,6 +1,8 @@
 import waterlvl
 import readtemp
-
+import os.path
+from os import path
+import os
 
 def getreply(string):
     string = string.split(',')
@@ -24,16 +26,19 @@ def test_getreply():
 
 
 def generate_config():
-    if not path.exists("./server.config"):
-	print("Could not locate config file. generating a new one\n")
-	try:
-		with open("server.config", "w") as f:
-			config['SETTINGS'] = {	'port': '8080', 'pubkey': '<insert here>'}
-			config.write(f)
-	except:
-		print("Failed to create a config file. Do you have write permissions here?\n")
-		exit(1)
-	print("Please fill in the config.server file")
+    if not path.exists("./test_config.config"):
+        print("Could not locate config file. generating a new one\n")
+        try:
+            with open("test_config.config", "w") as f:
+                    config['SETTINGS'] = {      'port': '8080', 'pubkey': '<insert here>'}
+                    config.write(f)
+        except:
+            print("Failed to create a config file. Do you have write permissions here?\n")
+            exit(1)
+        print("Please fill in the config.server file")
 
 def test_generate_config():
-    
+    if path.exists("./test_config.config"):
+        os.remove("./test_config.config")
+    generate_config()
+    assert path.exists("./test_config.config")
